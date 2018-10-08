@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes" /><!-- 删除苹果默认的工具栏和菜单栏 -->
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" /><!-- 设置苹果工具栏颜色 -->
+        <meta name="format-detection" content="telphone=no, email=no" /><!-- 忽略页面中的数字识别为电话，忽略email识别 -->
+        <!-- 启用360浏览器的极速模式(webkit) -->
+        <meta name="renderer" content="webkit">
+        <!-- 避免IE使用兼容模式 -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+        <meta name="HandheldFriendly" content="true">
+        <!-- 微软的老式浏览器 -->
+        <meta name="MobileOptimized" content="320">
+        <!-- uc强制竖屏 -->
+        <meta name="screen-orientation" content="portrait">
+        <!-- QQ强制竖屏 -->
+        <meta name="x5-orientation" content="portrait">
+        <!-- UC强制全屏 -->
+        <meta name="full-screen" content="yes">
+        <!-- QQ强制全屏 -->
+        <meta name="x5-fullscreen" content="true">
+        <!-- UC应用模式 -->
+        <meta name="browsermode" content="application">
+        <!-- QQ应用模式 -->
+        <meta name="x5-page-mode" content="app">
+        <!-- windows phone 点击无高光 -->
+        <meta name="msapplication-tap-highlight" content="no">
+        <!-- 适应移动端end -->
+    </head>
+    <link rel="stylesheet" type="text/css" href="css/base.css" />
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/base.js"></script>
+    <body>
+        <div class="warp">
+            <!-- 头部str -->
+            <div class="header clearfix">
+                <div class="header-l">
+                    <span class="iconfont icon-renwu-ren"></span>
+                    <span class="iconfont icon-fangdajing"></span>
+                </div>
+                <div class="header-logo">
+                    <img src="image/logo.png" width="80" />
+                </div>
+                <div class="header-r">
+                    <span class="iconfont icon-icozhuanhuan">
+                        <em>1</em>
+                    </span>
+                    <span class="iconfont icon-liebiao"></span>
+                </div>
+                <!-- 搜索 -->
+                <div class="header-search">
+                    <div class="header-search-b">
+                        <span class="iconfont icon-guanbi"></span>
+                        <form action="">
+                            <input type="text"  placeholder="Enter search title , sku , keywords here" class="search-sty" />
+                            <button class="search-btn">
+                                <span class="iconfont icon-fangdajing"></span>
+                            </button>
+                        </form>
+                    </div>
+                    <h3>Hot Searches</h3>
+                    <div class="search-hot">            
+                    <a href="http://www.aulola.co.uk/lp/wholesale-vr-headset.html?source=HotSearchKeywords">VR Headset</a>
+                    <a href="http://www.aulola.co.uk/index.php?main_page=advanced_search_result&amp;inc_subcat=1&amp;listtypes=2&amp;   search_in_description=1&amp;keyword=Waterproof+Case&amp;source=HotSearchKeywords">Waterproof Case</a>
+                    <a href="http://www.aulola.co.uk/index.php?main_page=advanced_search_result&amp;inc_subcat=1&amp;listtypes=2&amp;   search_in_description=1&amp;keyword=Headset&amp;source=HotSearchKeywords">Earphone</a>
+                    </div>
+                </div>
+
+                <!-- 头像icon个人中心 -->
+                <div class="slide-mask"></div>
+                <div class="slide-wrapper">
+                    <div>
+                        <div class="slide-bg">
+                            <div class="slide-bg-img">
+                                <img src="image/login.png" alt="" />
+                            </div>
+                            <div class="slide-bg-login">
+                                <div class="slide-login-go">
+                                    <a href="">Sign In</a>
+                                    <em>|</em>
+                                    <a href="">Join Free</a>
+                                </div>
+                                <!-- 未登入显示 slide-login-go  已登入显示 slide-login-text -->
+                                <div class="slide-login-text">
+                                    <p>litaogen</p>
+                                    <p>815690068@qq.com</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide-list">
+                            <div class="slide-list-box">
+                                <ul>
+                                    <li>
+                                        <!-- 回主页 -->
+                                        <a href="">
+                                            <span class="iconfont icon-fangzi"></span>
+                                            <em>Home</em>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <!-- 往个人中心 -->
+                                        <a href="">
+                                            <span class="iconfont icon-gerenzhongxinkaobei"></span>
+                                            <em>My Account</em>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <!-- 往列表页 -->
+                                        <a href="">
+                                            <span class="iconfont icon-liebiao"></span>
+                                            <em>All Categories</em>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- 货币切换 -->
+                            <div class="slide-list-box">
+                                <ul>
+                                    <li class="slide-help">
+                                        <span class="iconfont icon-wanggediqiu"></span>
+                                        <em>Currency</em>
+                                        <select name="" id="">
+                                            <option value="">€</option>
+                                            <option value="">$</option>
+                                            <option value="">£</option>
+                                        </select>
+                                        <p class="slide-help-name">
+                                            <span>£</span>
+                                            <em class="iconfont icon-30jiantouxiangxiafill"></em>
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 头部end -->
+
+            <div class="comment-top">
+                <div class="nav-name">
+                    <ul class="clearfix">
+                        <li><a href="#">Aulola</a></li>
+                        <li><a href="#">Area 51</a></li>
+                        <li><a href="#">Candyman</a></li>
+                        <li><a href="#">Custard Crew</a></li>
+                        <li><a href="#">Eight Wonder</a></li>
+                        <li><a href="#">Funky Monkey</a></li>
+                        <li><a href="#">Ifresh</a></li>
+                        <li><a href="#">Inspired</a></li>
+                        <li><a href="#">Joker Juice</a></li>
+                        <li><a href="#">Simplicious</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="banner">
+                <div class="swiper-container1">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><a href=""><img src="http://www.aulola.co.uk/images/m-samsung note 9 cover.jpg"  /></a></div>
+                        <div class="swiper-slide"><a href=""><img src="http://www.aulola.co.uk/images/water bottle-m.gif"  /></a></div>
+                        <div class="swiper-slide"><a href=""><img src="http://www.aulola.co.uk/images/m-bolloon.jpg"  /></a></div>
+                        <div class="swiper-slide"><a href=""><img src="http://www.aulola.co.uk/images/m-ipad-case.jpg"  /></a></div>
+                    </div>
+                    <div class="swiper-pagination1"></div>
+                </div>
+            </div>
+
+            <div class="list-nav">
+                <ul class="clearfix">
+                    <li>
+                        <div>
+                            <img src="http://www.aulolavapour.co.uk/media/catalog/product/cache/1/small_image/430x/040ec09b1e35df139433887a97daa66f/L/I/LIN-00013-1_2.jpg" alt="" />
+                        </div>
+                        <p>ELIQUID</p>
+                    </li>
+                    <li>
+                        <div>
+                            <img src="http://www.aulolavapour.co.uk/media/catalog/product/cache/1/small_image/430x/040ec09b1e35df139433887a97daa66f/e/a/eac-00170-1.jpg" alt="" />
+                        </div>
+                        <p>BATTERY</p>
+                    </li>
+                    <li>
+                        <div>
+                            <img src="http://www.aulolavapour.co.uk/media/catalog/product/cache/1/small_image/430x/040ec09b1e35df139433887a97daa66f/E/A/EAC-00341-1.jpg" alt="" />
+                        </div>
+                        <p>COIL</p>
+                    </li>
+                    <li>
+                        <div>
+                            <img src="http://www.aulolavapour.co.uk/media/catalog/product/cache/1/small_image/430x/040ec09b1e35df139433887a97daa66f/E/A/EAC-00077-1.jpg" alt="" />
+                        </div>
+                        <p>VAPE KITS</p>
+                    </li>
+                    <li>
+                        <div>
+                            <img src="http://www.aulolavapour.co.uk/media/catalog/product/cache/1/small_image/430x/040ec09b1e35df139433887a97daa66f/E/A/EAC-00316-1.jpg" alt="" />
+                        </div>
+                        <p>Atomizer</p>
+                    </li>
+                </ul>
+            </div>
+            <!-- 放六个就够了 -->
+            <div class="newProduct">
+                <h3>New Product <em></em></h3>
+                <div class="newProduct-list">
+                    <ul class="clearfix">
+                        <li>
+                            <div class="newProduct-list-box">
+                                <div>
+                                    <img src="http://www.aulolavapour.co.uk/media/catalog/product/cache/1/small_image/430x/040ec09b1e35df139433887a97daa66f/E/A/EAC-00316-1.jpg" />
+                                </div>
+                                <p class="newProduct-list-name">Inspired Vapour 1100mah BatteryInspired Vapour 1100mah BatteryInspired Vapour 1100mah Battery</p>
+                                <span class="newProduct-list-price">£1.89</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="newProduct-list-box">
+                                <div>
+                                    <img src="http://www.aulolavapour.co.uk/media/catalog/product/cache/1/small_image/430x/040ec09b1e35df139433887a97daa66f/E/A/EAC-00316-1.jpg" />
+                                </div>
+                                <p class="newProduct-list-name">Inspired Vapour 1100mah BatteryInspired Vapour 1100mah BatteryInspired Vapour 1100mah Battery</p>
+                                <span class="newProduct-list-price">£1.89</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="newProduct-list-box">
+                                <div>
+                                    <img src="http://www.aulolavapour.co.uk/media/catalog/product/cache/1/small_image/430x/040ec09b1e35df139433887a97daa66f/E/A/EAC-00316-1.jpg" />
+                                </div>
+                                <p class="newProduct-list-name">Inspired Vapour 1100mah BatteryInspired Vapour 1100mah BatteryInspired Vapour 1100mah Battery</p>
+                                <span class="newProduct-list-price">£1.89</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="newProduct-list-box">
+                                <div>
+                                    <img src="http://www.aulolavapour.co.uk/media/catalog/product/cache/1/small_image/430x/040ec09b1e35df139433887a97daa66f/E/A/EAC-00316-1.jpg" />
+                                </div>
+                                <p class="newProduct-list-name">Inspired Vapour 1100mah BatteryInspired Vapour 1100mah BatteryInspired Vapour 1100mah Battery</p>
+                                <span class="newProduct-list-price">£1.89</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="newProduct-list-box">
+                                <div>
+                                    <img src="http://www.aulolavapour.co.uk/media/catalog/product/cache/1/small_image/430x/040ec09b1e35df139433887a97daa66f/E/A/EAC-00316-1.jpg" />
+                                </div>
+                                <p class="newProduct-list-name">Inspired Vapour 1100mah BatteryInspired Vapour 1100mah BatteryInspired Vapour 1100mah Battery</p>
+                                <span class="newProduct-list-price">£1.89</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="newProduct-list-box">
+                                <div>
+                                    <img src="http://www.aulolavapour.co.uk/media/catalog/product/cache/1/small_image/430x/040ec09b1e35df139433887a97daa66f/E/A/EAC-00316-1.jpg" />
+                                </div>
+                                <p class="newProduct-list-name">Inspired Vapour 1100mah BatteryInspired Vapour 1100mah BatteryInspired Vapour 1100mah Battery</p>
+                                <span class="newProduct-list-price">£1.89</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- 各个产品logo -->
+            <div class="product-logo">
+                <h3>New Product <em></em></h3>
+                <div class="product-logo-img relative">
+                    <div class="swiper-container2">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="">
+                                <img src="http://www.aulolavapour.co.uk/media/brandlogo/SYCO.png" alt="" />
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="">
+                                <img src="http://www.aulolavapour.co.uk/media/brandlogo/Candyman.png" alt="" />
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="">
+                                <img src="http://www.aulolavapour.co.uk/media/brandlogo/Innokin.png" alt="" />
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="">
+                                <img src="http://www.aulolavapour.co.uk/media/brandlogo/SYCO.png" alt="" />
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="">
+                                <img src="http://www.aulolavapour.co.uk/media/brandlogo/Candyman.png" alt="" />
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="">
+                                <img src="http://www.aulolavapour.co.uk/media/brandlogo/Innokin.png" alt="" />
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="">
+                                <img src="http://www.aulolavapour.co.uk/media/brandlogo/SYCO.png" alt="" />
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="">
+                                <img src="http://www.aulolavapour.co.uk/media/brandlogo/Candyman.png" alt="" />
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="">
+                                <img src="http://www.aulolavapour.co.uk/media/brandlogo/Innokin.png" alt="" />
+                            </a>
+                        </div>
+                      </div>
+                      <!-- Add Pagination -->
+                      <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 页脚str -->
+            <div class="footer">
+                <div class="clearfix footer-list footer-tell">
+                    <a href="tel:0161-833-3499">0161-833-3499</a>
+                    <span class="iconfont icon-dianhua1"></span>
+                </div>
+                <div class="clearfix footer-list footer-tell">
+                    <a href="mailto:vapour@aulola.co.uk">vapour@aulola.co.uk</a>
+                    <span class="iconfont icon-youxiang"></span>
+                </div>
+                <div class="footer-list">
+                    <h3>WHOLESALE <span class="iconfont icon-ico_open fr"></span></h3>
+                    <div class="footer-list-nav">
+                        <ul>
+                            <li>
+                                <a href="">E-liquid</a>
+                            </li>
+                            <li>
+                                <a href="">Coil</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-list">
+                    <h3>INFORMATION <span class="iconfont icon-ico_open fr"></span></h3>
+                    <div class="footer-list-nav">
+                        <ul>
+                            <li>
+                                <a href="">About Us</a>
+                            </li>
+                            <li>
+                                <a href="">Privacy Policy</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- 页脚end -->
+        </div>
+    </body>
+</html>
+
+<script type="text/javascript">
+        // 轮播图
+    var swipert = new Swiper('.swiper-container1', {
+        pagination: {
+          el: '.swiper-pagination1',
+          clickable: true,
+        },
+        autoplay : 10000,
+        lazyLoading : true,
+        autoplayDisableOnInteraction : false,
+        grabCursor : true,
+        loop : true,
+        observer:true, 
+        observeParents:true,
+        paginationClickable: true
+    });
+
+
+    var swiperLogo = new Swiper('.swiper-container2', {
+      slidesPerView: 4,
+      slidesPerColumn: 2,
+      spaceBetween: 10,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 4,
+          spaceBetween: 10,
+        },
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 10,
+        }
+      }
+    });
+</script>
+
+
+
+

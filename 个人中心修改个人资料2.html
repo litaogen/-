@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes" /><!-- 删除苹果默认的工具栏和菜单栏 -->
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" /><!-- 设置苹果工具栏颜色 -->
+        <meta name="format-detection" content="telphone=no, email=no" /><!-- 忽略页面中的数字识别为电话，忽略email识别 -->
+        <!-- 启用360浏览器的极速模式(webkit) -->
+        <meta name="renderer" content="webkit">
+        <!-- 避免IE使用兼容模式 -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+        <meta name="HandheldFriendly" content="true">
+        <!-- 微软的老式浏览器 -->
+        <meta name="MobileOptimized" content="320">
+        <!-- uc强制竖屏 -->
+        <meta name="screen-orientation" content="portrait">
+        <!-- QQ强制竖屏 -->
+        <meta name="x5-orientation" content="portrait">
+        <!-- UC强制全屏 -->
+        <meta name="full-screen" content="yes">
+        <!-- QQ强制全屏 -->
+        <meta name="x5-fullscreen" content="true">
+        <!-- UC应用模式 -->
+        <meta name="browsermode" content="application">
+        <!-- QQ应用模式 -->
+        <meta name="x5-page-mode" content="app">
+        <!-- windows phone 点击无高光 -->
+        <meta name="msapplication-tap-highlight" content="no">
+        <!-- 适应移动端end -->
+    </head>
+    <link rel="stylesheet" type="text/css" href="css/base.css" />
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/base.js"></script>
+    <script src="js/public.js"></script>
+    <body>
+        <div class="warp">
+            <!-- 头部str -->
+            <div class="header clearfix">
+                <div class="header-l">
+                    <span class="iconfont icon-renwu-ren"></span>
+                    <span class="iconfont icon-fangdajing"></span>
+                </div>
+                <div class="header-logo">
+                    <img src="image/logo.png" width="80" />
+                </div>
+                <div class="header-r">
+                    <span class="iconfont icon-icozhuanhuan">
+                        <em>1</em>
+                    </span>
+                    <span class="iconfont icon-liebiao"></span>
+                </div>
+            </div>
+            <!-- 头部end -->
+
+
+            <div class="comment-top">
+                <div class="evaluate">
+                    <h3>
+                        <a href="javascript:history.go(-1)" class="iconfont icon-ico_open"></a>
+                        <span class="product-all-list">Change Password</span>
+                    </h3>
+                </div>
+                <div class="change-account">
+                    <form action="">
+                        <div class="change-account-box">
+                            <p class="change-account-name"><em>*</em> Current Password</p>
+                            <input type="password" class="currentPassword change-account-ipt" data-ajax="0"/>
+                            <span class="iconfont icon-suo"></span>
+                            <p class="red input-null">* This is a required field.</p>
+                        </div>
+                        <div class="change-account-box">
+                            <p class="change-account-name"><em>*</em> New Password</p>
+                            <input type="password" class="newPassword change-account-ipt" data-ajax="0"/>
+                            <span class="iconfont icon-suo"></span>
+                            <p class="red input-null">* This is a required field.</p>
+                            <p class="red input-length">* Please enter 6 or more characters. Leading or trailing spaces will be ignored.</p>
+                        </div>
+                        <div class="change-account-box">
+                            <p class="change-account-name"><em>*</em> Confirm New Password</p>
+                            <input type="password" class="confirmNewPassword change-account-ipt" data-ajax="0"/>
+                            <span class="iconfont icon-suo"></span>
+                            <p class="red input-null">* This is a required field.</p>
+                            <p class="red input-match">* Please make sure your passwords match.</p>
+                        </div>
+                        <p class="change-must">* Required Fields</p>
+                        <button class="change-account-btn">Save</button>
+                    </form>
+                </div>
+            </div>
+
+
+        </div>
+    </body>
+</html>
+<script type="text/javascript">
+    var winHeight=$(window).height();
+    $(".comment-top").css({"min-height":winHeight});
+
+
+    $(".change-account-ipt").on('blur',function(){
+        if($(this).val()==""){
+            $(this).siblings('.input-null').show();
+        }else{
+            $(this).siblings('.input-null').hide();
+            $(this).attr({"data-ajax":1, });
+        }
+    });
+    $(".change-account-ipt").on("focus",function(){
+        $(this).nextAll('.input-null,.input-match,.input-length').hide();
+    });
+
+    $(".newPassword").on('blur',function(){
+        var psdLen=$(".newPassword").val().length;
+        if(psdLen<6){
+            $(".input-length").show()
+            $(this).attr({"data-ajax":0, });
+        }
+    })
+    $(".confirmNewPassword").on("blur",function(){
+        var newPsd=$('.newPassword').val();
+        var conPsd=$('.confirmNewPassword').val();
+        if(conPsd!=newPsd){
+            $(this).attr({"data-ajax":0, });
+            $(".input-match").show();
+        }
+    })
+
+    // 提交
+    $(".change-account-btn").on("click",function(){
+        var currentPassword=$(".currentPassword").attr("data-ajax");
+        var newPassword=$(".newPassword").attr("data-ajax");
+        var confirmNewPassword=$(".confirmNewPassword").attr("data-ajax");
+        if(currentPassword==1 && newPassword==1 && confirmNewPassword==1 ){
+            console.log("可以提交");
+            return false;
+        }else{
+            console.log("不可以提交")
+            for(var i=0;i<$(".change-account-ipt").length;i++){
+                if($(".change-account-ipt").eq(i).val()==''){
+                    $(".change-account-ipt").eq(i).siblings('.input-null').show();
+                }
+            };
+            return false;
+        }
+    })
+</script>

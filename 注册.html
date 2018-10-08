@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes" /><!-- 删除苹果默认的工具栏和菜单栏 -->
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" /><!-- 设置苹果工具栏颜色 -->
+        <meta name="format-detection" content="telphone=no, email=no" /><!-- 忽略页面中的数字识别为电话，忽略email识别 -->
+        <!-- 启用360浏览器的极速模式(webkit) -->
+        <meta name="renderer" content="webkit">
+        <!-- 避免IE使用兼容模式 -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+        <meta name="HandheldFriendly" content="true">
+        <!-- 微软的老式浏览器 -->
+        <meta name="MobileOptimized" content="320">
+        <!-- uc强制竖屏 -->
+        <meta name="screen-orientation" content="portrait">
+        <!-- QQ强制竖屏 -->
+        <meta name="x5-orientation" content="portrait">
+        <!-- UC强制全屏 -->
+        <meta name="full-screen" content="yes">
+        <!-- QQ强制全屏 -->
+        <meta name="x5-fullscreen" content="true">
+        <!-- UC应用模式 -->
+        <meta name="browsermode" content="application">
+        <!-- QQ应用模式 -->
+        <meta name="x5-page-mode" content="app">
+        <!-- windows phone 点击无高光 -->
+        <meta name="msapplication-tap-highlight" content="no">
+        <!-- 适应移动端end -->
+    </head>
+    <link rel="stylesheet" type="text/css" href="css/base.css" />
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/base.js"></script>
+    <script src="js/public.js"></script>
+    <body>
+        <div class="warp">
+            <!-- 头部str -->
+            <div class="header clearfix">
+                <div class="header-l">
+                    <span class="iconfont icon-renwu-ren"></span>
+                    <span class="iconfont icon-fangdajing"></span>
+                </div>
+                <div class="header-logo">
+                    <img src="image/logo.png" width="80" />
+                </div>
+                <div class="header-r">
+                    <span class="iconfont icon-icozhuanhuan">
+                        <em>1</em>
+                    </span>
+                    <span class="iconfont icon-liebiao"></span>
+                </div>
+            </div>
+            <!-- 头部end -->
+
+
+            <div class="comment-top">
+                <div class="signUp">
+                    <h3>Create an Account</h3>
+                    <form action="">
+                        <div class="login-sty">
+                            <div class="createName">First Name <em>*</em></div>
+                            <input type="text" class="firstName CreateIpt" data-ajax="0"/>
+                            <span class="iconfont icon-iconset0137"></span>
+                            <p class="red input-null">* This is a required field.</p>
+                        </div>
+                        <div class="login-sty">
+                            <div class="createName">Last Name <em>*</em></div>
+                            <input type="text" class="lastName CreateIpt"  data-ajax="0"/>
+                            <span class="iconfont icon-iconset0137"></span>
+                            <p class="red input-null">* This is a required field.</p>
+                        </div>
+                        <div class="login-sty">
+                            <div class="createName">Email Address <em>*</em></div>
+                            <input type="text" class="emailAddress CreateIpt"  data-ajax="0"/>
+                            <span class="iconfont icon-youxiang"></span>
+                            <p class="red input-null">* This is a required field.</p>
+                            <p class="red email-error">* Please enter a valid email address. For example johndoe@domain.com.</p>
+                        </div>
+                        <div class="login-sty">
+                            <input type="checkbox" name="is_subscribed" id="is_subscribed"/>
+                            <label for="is_subscribed" style="vertical-align: text-bottom;">Sign Up for Newsletter</label>
+                        </div>
+                        <h4>Address Information</h4>
+                        <div class="login-sty">
+                            <div class="createName">Company</div>
+                            <input type="text"  class="Company CreateIpt" />
+                        </div>
+                        <div class="login-sty">
+                            <div class="createName">Telephone <em>*</em></div>
+                            <input type="text" class="Telephone CreateIpt"  data-ajax="0"/>
+                            <p class="red input-null">* This is a required field.</p>
+                        </div>
+                        <div class="login-sty">
+                            <div class="createName">Street Address <em>*</em></div>
+                            <input type="text" class="streetAddress CreateIpt"  data-ajax="0"/>
+                            <p class="red input-null">* This is a required field.</p>
+                        </div>  
+                        <div class="login-sty">
+                            <div class="createName">City <em>*</em></div>
+                            <input type="text" class="City CreateIpt"  data-ajax="0"/>
+                            <p class="red input-null">* This is a required field.</p>
+                        </div>    
+                        <div class="login-sty">
+                            <div class="createName">State/Province <em>*</em></div>
+                            <input type="text" class="Province CreateIpt" data-ajax="0" />
+                            <p class="red input-null">* This is a required field.</p>
+                        </div>    
+                        <div class="login-sty">
+                            <div class="createName">Zip/Postal Code <em>*</em></div>
+                            <input type="text" class="Zip CreateIpt"  data-ajax="0"/>
+                            <p class="red input-null">* This is a required field.</p>
+                        </div>    
+                        <div class="login-sty">
+                            <div class="createName">Country <em>*</em></div>
+                            <select name="" id="">
+                                <option value="">Afghanistan</option>
+                                <option value="">Albania</option>
+                            </select>
+                        </div>  
+                        <h4>Login Information</h4>
+                        <div class="login-sty">
+                            <div class="createName">Password <em>*</em></div>
+                            <input type="text" class="password CreateIpt" data-ajax="0"/>
+                            <p class="red input-null">* This is a required field.</p>
+                            <p class="red input-length">* Please enter 6 or more characters. Leading or trailing spaces will be ignored.</p>
+                        </div>
+                        <div class="login-sty">
+                            <div class="createName">Confirm Password <em>*</em></div>
+                            <input type="text" class="confirmPassword CreateIpt" data-ajax="0"/>
+                            <p class="red input-null">* This is a required field.</p>
+                            <p class="red passwordWary">* Please make sure your passwords match.</p>
+                        </div>
+                        <div class="login-sty">
+                            <div class="createName">Please type the letters below <em>*</em></div>
+                            <input type="text" class="pleaseBelow CreateIpt" data-ajax="0"/>
+                            <p class="red input-null">* This is a required field.</p>
+                            <!-- 这里好像是填写验证码  -->
+                        </div>
+                        <p class="important" style="margin-bottom: 10px;">* Required Fields</p>
+                        <button class="CreatButton">Submit</button>
+                    </form>
+
+                </div>
+            </div>
+
+
+        </div>
+    </body>
+</html>
+<script type="text/javascript">
+    $(".CreateIpt").on('blur',function(){
+        if($(this).val()==""){
+            $(this).siblings('.input-null').show();
+        }else{
+            $(this).siblings('.input-null').hide();
+            $(this).attr({"data-ajax":1, });
+        }
+    });
+
+    $(".signUp input").on("focus",function(){
+        $(this).nextAll('.input-null,.input-length').hide();
+    });
+    // 邮箱
+    $(".emailAddress").on("blur",function(){
+        var emailS=/^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.[a-zA-Z0-9]{2,6}$/;
+        var _tVal=$.trim($(this).val());
+        if(_tVal==""){
+            $(this).siblings('.input-null').show();
+            $(this).siblings('.email-error').hide();
+        }else if(!emailS.test(_tVal)){
+            $(this).siblings('.input-null').hide();
+            $(this).siblings('.email-error').show();
+        }else{
+            $(this).attr({"data-ajax":1, });
+        }
+    });
+
+    // 密码
+    $(".password").on('blur',function(){
+        var psdLen=$(".password").val().length;
+        if(psdLen<6){
+            $(".input-length").show()
+            $(this).attr({"data-ajax":0, });
+        }
+    })
+
+    // 确认密码
+    $(".confirmPassword").on("blur",function(){
+        var logoPsd=$(".password").val();
+        if($(this).val()==""){
+            $(this).siblings('.input-null').show();
+            $(this).siblings('.passwordWary').hide();
+        }else if($(this).val()!=logoPsd){
+            $(this).siblings('.passwordWary').show();
+            $(this).siblings('.input-null').hide();
+        }else{
+            $(this).attr({"data-ajax":1,});
+        };
+    });  
+
+    // 注册提交
+    $(".CreatButton").on("click",function(){
+        var firstAttr=$(".firstName").attr("data-ajax");
+        var lastAttr=$(".lastName").attr("data-ajax");
+        var emailAttr=$(".emailAddress").attr("data-ajax");
+        var TelephoneAttr=$(".Telephone").attr("data-ajax");
+        var streetAttr=$(".streetAddress").attr("data-ajax");
+        var CityAttr=$(".City").attr("data-ajax");
+        var ProvinceAttr=$(".Province").attr("data-ajax");
+        var passwordAttr=$(".password").attr("data-ajax");
+        var confirmAttr=$(".confirmPassword").attr("data-ajax");
+        var pleaseBelowAttr=$(".pleaseBelow").attr("data-ajax");
+        if(firstAttr==1 && lastAttr==1 && emailAttr==1 && TelephoneAttr==1 && streetAttr==1 && CityAttr==1 && ProvinceAttr==1 && passwordAttr==1 && confirmAttr==1 && pleaseBelowAttr==1){
+            console.log("可以提交");
+            return false;
+        }else{
+            console.log("不可以提交")
+            for(var i=0;i<$(".CreateIpt").length;i++){
+                if($(".CreateIpt").eq(i).val()==''){
+                    $(".CreateIpt").eq(i).siblings('.input-null').show();
+                }
+            };
+            return false;
+        }
+    })
+</script>

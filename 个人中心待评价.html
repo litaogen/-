@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes" /><!-- 删除苹果默认的工具栏和菜单栏 -->
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" /><!-- 设置苹果工具栏颜色 -->
+        <meta name="format-detection" content="telphone=no, email=no" /><!-- 忽略页面中的数字识别为电话，忽略email识别 -->
+        <!-- 启用360浏览器的极速模式(webkit) -->
+        <meta name="renderer" content="webkit">
+        <!-- 避免IE使用兼容模式 -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+        <meta name="HandheldFriendly" content="true">
+        <!-- 微软的老式浏览器 -->
+        <meta name="MobileOptimized" content="320">
+        <!-- uc强制竖屏 -->
+        <meta name="screen-orientation" content="portrait">
+        <!-- QQ强制竖屏 -->
+        <meta name="x5-orientation" content="portrait">
+        <!-- UC强制全屏 -->
+        <meta name="full-screen" content="yes">
+        <!-- QQ强制全屏 -->
+        <meta name="x5-fullscreen" content="true">
+        <!-- UC应用模式 -->
+        <meta name="browsermode" content="application">
+        <!-- QQ应用模式 -->
+        <meta name="x5-page-mode" content="app">
+        <!-- windows phone 点击无高光 -->
+        <meta name="msapplication-tap-highlight" content="no">
+        <!-- 适应移动端end -->
+    </head>
+    <link rel="stylesheet" type="text/css" href="css/base.css" />
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/base.js"></script>
+    <script src="js/public.js"></script>
+    <body>
+        <div class="warp">
+            <!-- 头部str -->
+            <div class="header clearfix">
+                <div class="header-l">
+                    <span class="iconfont icon-renwu-ren"></span>
+                    <span class="iconfont icon-fangdajing"></span>
+                </div>
+                <div class="header-logo">
+                    <img src="image/logo.png" width="80" />
+                </div>
+                <div class="header-r">
+                    <span class="iconfont icon-icozhuanhuan">
+                        <em>1</em>
+                    </span>
+                    <span class="iconfont icon-liebiao"></span>
+                </div>
+            </div>
+            <!-- 头部end -->
+
+            <div class="comment-top evaluate-bg">
+                <div class="evaluate">
+                    <h3>
+                        <a href="javascript:history.go(-1)" class="iconfont icon-ico_open"></a>
+                        <span class="product-all-list">待评价</span>
+                    </h3>
+                    <!-- 没有评价产品就显示这个 -->
+                    <div class="evaluate-img">
+                        <img src="image/evaluate.png" alt="" />
+                    </div>
+                </div>
+
+                <div class="evaluate-list">
+                    <ul>
+                        <li class="clearfix">
+                            <div class="evaluate-t">
+                                <span>Order:</span>
+                                <span>1500000560</span>
+                                <em class="fr">14/09/2018</em>
+                            </div>
+                            <div class="evaluate-list-l">
+                                <img src="http://www.aulola.co.uk/images/l/201509/14423775120.jpg" alt="" />
+                            </div>
+                            <div class="evaluate-list-r">
+                                <p class="evaluate-list-name">High-definition Protective Film for iPhone 6 Plus</p>
+                                <p class="evaluate-strength">
+                                    <span>Nicotine Strength: </span>
+                                    <span>0mg</span>
+                                </p>
+                                <!-- 或者 -->
+                                <p class="evaluate-strength">
+                                    <span>colours:  </span>
+                                    <img src="image/blue.png" alt="" width="25"/>
+                                </p>
+                                <p class="evaluate-price">Amount: <span>£15.85</span></p>
+                                <a href="" class="evaluate-href">evaluate</a>
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                            <div class="evaluate-t">
+                                <span>Order:</span>
+                                <span>1500000560</span>
+                                <em class="fr">14/09/2018</em>
+                            </div>
+                            <div class="evaluate-list-l">
+                                <img src="http://www.aulola.co.uk/images/l/201509/14423775120.jpg" alt="" />
+                            </div>
+                            <div class="evaluate-list-r">
+                                <p class="evaluate-list-name">High-definition Protective Film for iPhone 6 Plus</p>
+                                <p class="evaluate-strength">
+                                    <span>Nicotine Strength: </span>
+                                    <span>0mg</span>
+                                </p>
+                                <!-- 或者 -->
+                                <p class="evaluate-strength">
+                                    <span>colours:  </span>
+                                    <img src="image/blue.png" alt="" width="25"/>
+                                </p>
+                                <p class="evaluate-price">Amount: <span>£15.85</span></p>
+                                <a href="" class="evaluate-href">evaluate</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+        </div>
+    </body>
+</html>
+<script type="text/javascript">
+    var winHeight=$(window).height();
+    $(".evaluate-bg").css({"min-height":winHeight});
+</script>

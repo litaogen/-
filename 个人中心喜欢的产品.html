@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes" /><!-- 删除苹果默认的工具栏和菜单栏 -->
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" /><!-- 设置苹果工具栏颜色 -->
+        <meta name="format-detection" content="telphone=no, email=no" /><!-- 忽略页面中的数字识别为电话，忽略email识别 -->
+        <!-- 启用360浏览器的极速模式(webkit) -->
+        <meta name="renderer" content="webkit">
+        <!-- 避免IE使用兼容模式 -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+        <meta name="HandheldFriendly" content="true">
+        <!-- 微软的老式浏览器 -->
+        <meta name="MobileOptimized" content="320">
+        <!-- uc强制竖屏 -->
+        <meta name="screen-orientation" content="portrait">
+        <!-- QQ强制竖屏 -->
+        <meta name="x5-orientation" content="portrait">
+        <!-- UC强制全屏 -->
+        <meta name="full-screen" content="yes">
+        <!-- QQ强制全屏 -->
+        <meta name="x5-fullscreen" content="true">
+        <!-- UC应用模式 -->
+        <meta name="browsermode" content="application">
+        <!-- QQ应用模式 -->
+        <meta name="x5-page-mode" content="app">
+        <!-- windows phone 点击无高光 -->
+        <meta name="msapplication-tap-highlight" content="no">
+        <!-- 适应移动端end -->
+    </head>
+    <link rel="stylesheet" type="text/css" href="css/base.css" />
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/easydialog.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script type="text/javascript" src="js/easydialog.min.js"></script>
+    <script type="text/javascript" src="js/easydialog-pop.js"></script>
+    <script src="js/base.js"></script>
+    <body>
+        <div class="warp">
+            <!-- 头部str -->
+            <div class="header clearfix">
+                <div class="header-l">
+                    <span class="iconfont icon-renwu-ren"></span>
+                    <span class="iconfont icon-fangdajing"></span>
+                </div>
+                <div class="header-logo">
+                    <img src="image/logo.png" width="80" />
+                </div>
+                <div class="header-r">
+                    <span class="iconfont icon-icozhuanhuan">
+                        <em>1</em>
+                    </span>
+                    <span class="iconfont icon-liebiao"></span>
+                </div>
+                <!-- 搜索 -->
+                <div class="header-search">
+                    <div class="header-search-b">
+                        <span class="iconfont icon-guanbi"></span>
+                        <form action="">
+                            <input type="text"  placeholder="Enter search title , sku , keywords here" class="search-sty" />
+                            <button class="search-btn">
+                                <span class="iconfont icon-fangdajing"></span>
+                            </button>
+                        </form>
+                    </div>
+                    <h3>Hot Searches</h3>
+                    <div class="search-hot">            
+                    <a href="http://www.aulola.co.uk/lp/wholesale-vr-headset.html?source=HotSearchKeywords">VR Headset</a>
+                    <a href="http://www.aulola.co.uk/index.php?main_page=advanced_search_result&amp;inc_subcat=1&amp;listtypes=2&amp;   search_in_description=1&amp;keyword=Waterproof+Case&amp;source=HotSearchKeywords">Waterproof Case</a>
+                    <a href="http://www.aulola.co.uk/index.php?main_page=advanced_search_result&amp;inc_subcat=1&amp;listtypes=2&amp;   search_in_description=1&amp;keyword=Headset&amp;source=HotSearchKeywords">Earphone</a>
+                    </div>
+                </div>
+
+                <!-- 头像icon个人中心 -->
+                <div class="slide-mask"></div>
+                <div class="slide-wrapper">
+                    <div>
+                        <div class="slide-bg">
+                            <div class="slide-bg-img">
+                                <img src="image/login.png" alt="" />
+                            </div>
+                            <div class="slide-bg-login">
+                                <div class="slide-login-go">
+                                    <a href="">Sign In</a>
+                                    <em>|</em>
+                                    <a href="">Join Free</a>
+                                </div>
+                                <!-- 未登入显示 slide-login-go  已登入显示 slide-login-text -->
+                                <div class="slide-login-text">
+                                    <p>litaogen</p>
+                                    <p>815690068@qq.com</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide-list">
+                            <div class="slide-list-box">
+                                <ul>
+                                    <li>
+                                        <!-- 回主页 -->
+                                        <a href="">
+                                            <span class="iconfont icon-fangzi"></span>
+                                            <em>Home</em>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <!-- 往个人中心 -->
+                                        <a href="">
+                                            <span class="iconfont icon-gerenzhongxinkaobei"></span>
+                                            <em>My Account</em>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <!-- 往列表页 -->
+                                        <a href="">
+                                            <span class="iconfont icon-liebiao"></span>
+                                            <em>All Categories</em>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- 货币切换 -->
+                            <div class="slide-list-box">
+                                <ul>
+                                    <li class="slide-help">
+                                        <span class="iconfont icon-wanggediqiu"></span>
+                                        <em>Currency</em>
+                                        <select name="" id="">
+                                            <option value="">€</option>
+                                            <option value="">$</option>
+                                            <option value="">£</option>
+                                        </select>
+                                        <p class="slide-help-name">
+                                            <span>£</span>
+                                            <em class="iconfont icon-30jiantouxiangxiafill"></em>
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 头部end -->
+
+            <div class="comment-top evaluate-bg">
+                <div class="evaluate">
+                    <h3>
+                        <a href="javascript:history.go(-1)" class="iconfont icon-ico_open"></a>
+                        <span class="product-all-list">历史订单</span>
+                    </h3>
+                    <!-- 没有订单就显示这个 -->
+                    <div class="evaluate-img">
+                        <img src="image/love.png" alt="" />
+                    </div>
+                </div>
+
+                <div class="evaluate-list">
+                    <ul>
+                        <li class="evaluate-li-box">
+                            <div class="evaluate-t">
+                                <span>Order:</span>
+                                <span>1500000560</span>
+                                <em class="fr">14/09/2018</em>
+                            </div>
+                            <div class="clearfix">
+                                <div class="evaluate-list-l">
+                                    <img src="http://www.aulola.co.uk/images/l/201509/14423775120.jpg" alt="" />
+                                </div>
+                                <div class="evaluate-list-r">
+                                    <p class="evaluate-list-name">111High-definition Protective Film for iPhone 6 Plus</p>
+                                    <p class="evaluate-strength">
+                                        <span>Nicotine Strength: </span>
+                                        <span>0mg</span>
+                                    </p>
+                                    <!-- 或者 -->
+                                    <p class="evaluate-strength">
+                                        <span>colours:  </span>
+                                        <img src="image/blue.png" alt="" width="25"/>
+                                    </p>
+                                    <p class="evaluate-price">Amount: 
+                                        <span>£15.85</span> 
+                                        <span class="love-buy-moq">(MOQ : <em>10 </em>Units)</span>
+                                    </p>
+                                    <div class="live-buy-num">
+                                        <span>Quantity:</span>
+                                        <span class="product-buy-b product-buy-add iconfont icon-jianhao"><em>-</em></span>
+                                        <input type="text" value="18" class="product-buy-ipt">
+                                        <span class="product-buy-b product-buy-reduce iconfont icon-jiahao"><em>+</em></span>
+                                    </div>
+                                </div>   
+                            </div>
+                            <div class="live-bottom">
+                                <span class="live-delete"><em class="iconfont icon-shanchu"></em> delete</span>
+                                <span class="fr icon-icozhuanhuan iconfont live-buy-cart"></span>
+                            </div>
+                        </li>
+                        <li class="evaluate-li-box">
+                            <div class="evaluate-t">
+                                <span>Order:</span>
+                                <span>1500000560</span>
+                                <em class="fr">14/09/2018</em>
+                            </div>
+                            <div class="clearfix">
+                                <div class="evaluate-list-l">
+                                    <img src="http://www.aulola.co.uk/images/l/201509/14423775120.jpg" alt="" />
+                                </div>
+                                <div class="evaluate-list-r">
+                                    <p class="evaluate-list-name">8888High-definition Protective Film for iPhone 6 Plus</p>
+                                    <p class="evaluate-strength">
+                                        <span>Nicotine Strength: </span>
+                                        <span>0mg</span>
+                                    </p>
+                                    <!-- 或者 -->
+                                    <p class="evaluate-strength">
+                                        <span>colours:  </span>
+                                        <img src="image/blue.png" alt="" width="25"/>
+                                    </p>
+                                    <p class="evaluate-price">Amount: 
+                                        <span>£15.85</span> 
+                                        <span class="love-buy-moq">(MOQ : <em>12 </em>Units)</span>
+                                    </p>
+                                    <div class="live-buy-num">
+                                        <span>Quantity:</span>
+                                        <span class="product-buy-b product-buy-add iconfont icon-jianhao"><em>-</em></span>
+                                        <input type="text" value="10" class="product-buy-ipt">
+                                        <span class="product-buy-b product-buy-reduce iconfont icon-jiahao"><em>+</em></span>
+                                    </div>
+                                </div>   
+                            </div>
+                            <div class="live-bottom">
+                                <span class="live-delete"><em class="iconfont icon-shanchu"></em> delete</span>
+                                <span class="fr icon-icozhuanhuan iconfont live-buy-cart"></span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+        </div>
+    </body>
+</html>
+<script type="text/javascript">
+    var winHeight=$(window).height();
+    $(".evaluate-bg").css({"min-height":winHeight});
+
+
+    // 获取货币符号
+    var currency=$(".slide-help-name span").html();
+    $(".product-buy-b").on("click",function(){
+        var minMoq=$(this).parents('li').find('.love-buy-moq em').html();
+        var str="<div class='numVal-len'>"+
+            "<p>The min order quantity of this item is "+minMoq+" pcs</p>"+
+        "</div>";
+        // 获取最小起订量
+        var buyIcon=$(this).children('em').html();
+        var productIpt= $(this).siblings(".product-buy-ipt").val();
+        var productIpt=parseInt(productIpt)
+        if(buyIcon=='-'){
+            if(productIpt<=minMoq){
+                pop.init({con:str})
+                return;
+            }
+            productIpt--;
+
+        }else if(buyIcon=='+'){
+            productIpt++;
+        }
+        $(this).siblings(".product-buy-ipt").val(productIpt);
+    })
+    // 丢失焦点
+    $(".product-buy-ipt").on("blur",function(){
+        var minMoq=$(this).parents('li').find('.love-buy-moq em').html();
+        console.log(minMoq)
+        var str="<div class='numVal-len'>"+
+            "<p>The min order quantity of this item is "+minMoq+" pcs</p>"+
+        "</div>";
+        var numVal=$(this).val();
+        console.log(numVal)
+        if(numVal<minMoq){
+            pop.init({con:str});
+           $(this).val(minMoq);
+        }
+    });
+
+    $(".live-delete").on("click",function(){
+        var _t=$(this);
+        pop.init({con:"你确定删除该产品吗？",yesFn:function(){
+            _t.parents(".evaluate-li-box").animate({"opacity":0},400,function(){
+                 _t.parents(".evaluate-li-box").remove();
+            });
+        }});
+    });
+    // 加入购物车
+    $(".live-buy-cart").on("click",function(){
+        pop.addCart({con:"<span class='iconfont icon-gou icon-gou-car'></span>1 item(s) added to cart",yesFn:function(){
+            location.href="javascript:;"
+        }});
+    })
+</script>

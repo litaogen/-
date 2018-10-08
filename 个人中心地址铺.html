@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes" /><!-- 删除苹果默认的工具栏和菜单栏 -->
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" /><!-- 设置苹果工具栏颜色 -->
+        <meta name="format-detection" content="telphone=no, email=no" /><!-- 忽略页面中的数字识别为电话，忽略email识别 -->
+        <!-- 启用360浏览器的极速模式(webkit) -->
+        <meta name="renderer" content="webkit">
+        <!-- 避免IE使用兼容模式 -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+        <meta name="HandheldFriendly" content="true">
+        <!-- 微软的老式浏览器 -->
+        <meta name="MobileOptimized" content="320">
+        <!-- uc强制竖屏 -->
+        <meta name="screen-orientation" content="portrait">
+        <!-- QQ强制竖屏 -->
+        <meta name="x5-orientation" content="portrait">
+        <!-- UC强制全屏 -->
+        <meta name="full-screen" content="yes">
+        <!-- QQ强制全屏 -->
+        <meta name="x5-fullscreen" content="true">
+        <!-- UC应用模式 -->
+        <meta name="browsermode" content="application">
+        <!-- QQ应用模式 -->
+        <meta name="x5-page-mode" content="app">
+        <!-- windows phone 点击无高光 -->
+        <meta name="msapplication-tap-highlight" content="no">
+        <!-- 适应移动端end -->
+    </head>
+    <link rel="stylesheet" type="text/css" href="css/base.css" />
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/base.js"></script>
+    <script src="js/public.js"></script>
+    <body>
+        <div class="warp">
+            <!-- 头部str -->
+            <div class="header clearfix">
+                <div class="header-l">
+                    <span class="iconfont icon-renwu-ren"></span>
+                    <span class="iconfont icon-fangdajing"></span>
+                </div>
+                <div class="header-logo">
+                    <img src="image/logo.png" width="80" />
+                </div>
+                <div class="header-r">
+                    <span class="iconfont icon-icozhuanhuan">
+                        <em>1</em>
+                    </span>
+                    <span class="iconfont icon-liebiao"></span>
+                </div>
+            </div>
+            <!-- 头部end -->
+
+            <div class="comment-top address-bg">
+                <div class="address">
+                    <h3>
+                        <a href="javascript:history.go(-1)" class="iconfont icon-ico_open"></a>
+                        <span class="product-all-list">Address Book</span>
+                    </h3>
+                    <div class="address-all">
+                        <div class="address-box">
+                            <h4>liili <span class="iconfont icon-iconset0137 fr"><em>Edit</em></span></h4>
+                            <p class="address-sty">65121,sfdgsfdg,fasdfasdf,Azores (Portugal) Contact Person: mzmzmzmz, </p>
+                            <p class="address-sty">Phone: 16515115215155</p>
+                            <div class="address-box-b">
+                                <span class="iconfont icon-dizhi f23"></span>
+                                <span>Default Billing Address</span>
+                            </div>
+                        </div>
+                        <div class="address-box">
+                            <h4>liili <span class="iconfont icon-iconset0137 fr"><em>Edit</em></span></h4>
+                            <p class="address-sty">65121,sfdgsfdg,fasdfasdf,Azores (Portugal) Contact Person: mzmzmzmz, </p>
+                            <p class="address-sty">Phone: 16515115215155</p>
+                            <div class="address-box-b">
+                                <span class="iconfont icon-dizhi f60"></span>
+                                <span>Default Shipping Address</span>
+                            </div>
+                        </div>
+
+                        <div class="add-new-addre">Add a New Address</div>
+
+                        <div class="address-box clearfix">
+                            <h4>liili <span class="iconfont icon-iconset0137 fr"><em>Edit</em></span></h4>
+                            <p class="address-sty">65121,sfdgsfdg,fasdfasdf,Azores (Portugal) Contact Person: mzmzmzmz, </p>
+                            <p class="address-sty">Phone: 16515115215155</p>
+                            <div class="address-box-b">
+                                <div class="fr address-remove">
+                                    <span class="iconfont icon-shanchu"></span>
+                                    <span>remove</span>                               
+                                </div>
+                            </div>
+                        </div>  
+
+                        <!-- 地址框 -->
+                        <div class="address-new-bg" style="display:none;">
+                            <h3>
+                                <a href="javascript:history.go(-1)" class="iconfont icon-ico_open"></a>
+                                <span class="product-all-list">Contact Information</span>
+                            </h3>
+                            <div class="address-comment">
+                                <form action="">
+                                <div class="address-comment-sty">
+                                    <p class="address-new-name"> First Name <span>*</span></p>
+                                    <input type="text" class="address-comment-ipt address-first-name address-state" data-ajax="0"/>
+                                    <p class="red input-null">* This is a required field.</p>
+                                </div>
+                                <div class="address-comment-sty">
+                                    <p class="address-new-name"> Last Name <span>*</span></p>
+                                    <input type="text" class="address-comment-ipt address-last-name address-state" data-ajax="0"/>
+                                    <p class="red input-null">* This is a required field.</p>
+                                </div>
+                                <div class="address-comment-sty">
+                                    <p class="address-new-name"> Company</p>
+                                    <input type="text" class="address-comment-ipt"/>
+                                </div>
+                                <div class="address-comment-sty">
+                                    <p class="address-new-name"> Telephone <span>*</span></p>
+                                    <input type="text" class="address-comment-ipt address-telephone address-state" data-ajax="0"/>
+                                    <p class="red input-null">* This is a required field.</p>
+                                </div>
+                                <div class="address-comment-sty">
+                                    <p class="address-new-name"> Fax</p>
+                                    <input type="text" class="address-comment-ipt"/>
+                                </div>
+                                <div class="address-comment-sty">
+                                    <p class="address-new-name"> Street Address <span>*</span></p>
+                                    <input type="text" class="address-comment-ipt address-street-address address-state" data-ajax="0"/>
+                                    <p class="red input-null">* This is a required field.</p>
+                                </div>
+                                <div class="address-comment-sty">
+                                    <p class="address-new-name"> City <span>*</span></p>
+                                    <input type="text" class="address-comment-ipt address-city address-state" data-ajax="0"/>
+                                    <p class="red input-null">* This is a required field.</p>
+                                </div>
+                                <div class="address-comment-sty">
+                                    <p class="address-new-name"> State/Province <span>*</span></p>
+                                    <input type="text" class="address-comment-ipt address-province address-state" data-ajax="0"/>
+                                    <p class="red input-null">* This is a required field.</p>
+                                </div>
+                                <div class="address-comment-sty">
+                                    <p class="address-new-name"> Zip/Postal Code <span>*</span></p>
+                                    <input type="text" class="address-comment-ipt address-zip address-state" data-ajax="0"/>
+                                    <p class="red input-null">* This is a required field.</p>
+                                </div>
+                                <div class="address-comment-sty">
+                                    <p class="address-new-name"> Country <span>*</span></p>
+                                    <select name="" id="" class="address-comment-select">
+                                        <option value="">Afghanistan</option>
+                                        <option value="">Åland Islands</option>
+                                        <option value="">Angola</option>
+                                    </select>
+                                </div>
+                                <div class="address-comment-sty">
+                                    <ul>
+                                        <li>
+                                            <input type="checkbox" value='1' id="primary_billing" name="default_billing" class="address-comment-checkbox" />
+                                            <label for="primary_billing" >Use as my default billing address</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" value='1' id="primary_shipping" name="default_shipping" class="address-comment-checkbox"/>
+                                            <label for="primary_shipping" >Use as my default shipping address</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="address-comment-sty">
+                                    <button class="address-comment-btn">Save Address</button>
+                                </div>
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </body>
+</html>
+<script type="text/javascript">
+    var winHeight=$(window).height();
+    $(".comment-top").css({"min-height":winHeight});
+
+    $(".add-new-addre").on('click',function(){
+        $(".address-new-bg").show()
+    })
+
+    $(".address-state").on('blur',function(){
+        if($(this).val()==""){
+            $(this).siblings('.input-null').show();
+        }else{
+            $(this).siblings('.input-null').hide();
+            $(this).attr({"data-ajax":1, });
+        }
+    });
+    $(".address-comment input").on("focus",function(){
+        $(this).nextAll('.input-null').hide();
+    });
+
+
+    // 提交
+    $(".address-comment-btn").on("click",function(){
+        var addressFirstName=$(".address-first-name").attr("data-ajax");
+        var addressLastName=$(".address-last-name").attr("data-ajax");
+        var addressTelephone=$(".address-telephone").attr("data-ajax");
+        var addressStreetAddress=$(".address-street-address").attr("data-ajax");
+        var addressCity=$(".address-city").attr("data-ajax");
+        var addressProvince=$(".address-province").attr("data-ajax");
+        var addressZip=$(".address-zip").attr("data-ajax");
+        if(addressFirstName==1 && addressLastName==1 && addressTelephone==1 && addressStreetAddress==1 && addressCity==1 && addressState==1 && addressZip==1){
+            console.log("可以提交");
+            return false;
+        }else{
+            console.log("不可以提交")
+            for(var i=0;i<$(".address-state").length;i++){
+                if($(".address-state").eq(i).val()==''){
+                    $(".address-state").eq(i).siblings('.input-null').show();
+                }
+            };
+            return false;
+        }
+    })
+</script>

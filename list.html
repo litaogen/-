@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes" /><!-- 删除苹果默认的工具栏和菜单栏 -->
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" /><!-- 设置苹果工具栏颜色 -->
+        <meta name="format-detection" content="telphone=no, email=no" /><!-- 忽略页面中的数字识别为电话，忽略email识别 -->
+        <!-- 启用360浏览器的极速模式(webkit) -->
+        <meta name="renderer" content="webkit">
+        <!-- 避免IE使用兼容模式 -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+        <meta name="HandheldFriendly" content="true">
+        <!-- 微软的老式浏览器 -->
+        <meta name="MobileOptimized" content="320">
+        <!-- uc强制竖屏 -->
+        <meta name="screen-orientation" content="portrait">
+        <!-- QQ强制竖屏 -->
+        <meta name="x5-orientation" content="portrait">
+        <!-- UC强制全屏 -->
+        <meta name="full-screen" content="yes">
+        <!-- QQ强制全屏 -->
+        <meta name="x5-fullscreen" content="true">
+        <!-- UC应用模式 -->
+        <meta name="browsermode" content="application">
+        <!-- QQ应用模式 -->
+        <meta name="x5-page-mode" content="app">
+        <!-- windows phone 点击无高光 -->
+        <meta name="msapplication-tap-highlight" content="no">
+        <!-- 适应移动端end -->
+    </head>
+    <link rel="stylesheet" type="text/css" href="css/base.css" />
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/base.js"></script>
+    <script src="js/public.js"></script>
+    <body>
+        <div class="warp">
+            <!-- 头部str -->
+            <div class="header clearfix">
+                <div class="header-l">
+                    <span class="iconfont icon-renwu-ren"></span>
+                    <span class="iconfont icon-fangdajing"></span>
+                </div>
+                <div class="header-logo">
+                    <img src="image/logo.png" width="80" />
+                </div>
+                <div class="header-r">
+                    <span class="iconfont icon-icozhuanhuan">
+                        <em>1</em>
+                    </span>
+                    <span class="iconfont icon-liebiao"></span>
+                </div>
+            </div>
+            <!-- 头部end -->
+
+            <div class="comment-top">
+                <div class="product-show">
+                    <h3>
+                        <a href="javascript:history.go(-1)" class="iconfont icon-ico_open"></a>
+                        <span class="product-all-list">Aulola<em class="iconfont icon-30jiantouxiangxiafill"></em></span>
+                    </h3>
+                    <div class="product-all-list-bg">
+                        <div class="product-all-list-t">
+                            <ul>
+                                <li><a href="">Galaxy A8 2018</a></li>
+                                <li><a href="">Galaxy S9</a></li>
+                                <li><a href="">Galaxy S9 Plus</a></li>
+                                <li><a href="">Other Models</a></li>
+                                <li><a href="">Galaxy S8 Plus</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="product-classification clearfix">
+                        <span class="fl">44 results</span>
+                        <div class="fr list-classification">
+                            <p class="list-classification-t">
+                                <span class="list-classification-name">Position</span>
+                                <span class="iconfont icon-30jiantouxiangxiafill"></span>
+                            </p>
+                            <form action="">
+                                <select name="" id="" class="list-classification-l">
+                                    <option value="">Position</option>
+                                    <option value="">Price</option>
+                                    <option value="">Hot Sale</option>
+                                    <option value="">New Arrival</option>
+                                </select>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="list-product-box">
+                        <ul>
+                            <!-- 建议一页只放十个 -->
+                            <li>
+                                <a href=""  class="clearfix">
+                                    <div class="list-product-l">
+                                        <img src="http://www.aulola.co.uk/images/l/201509/14423775120.jpg" alt="" />
+                                    </div>
+                                    <div class="list-product-r">
+                                        <p class="list-product-name">High-definition Protective Film for iPhone 6 Plus</p>
+                                        <p class="list-product-stock">UK Stock: 1677</p>
+                                        <p class="list-product-price">£0.57</p>
+                                    </div>
+                                </a>
+                                <div class="product-live my-live">
+                                    <span class="iconfont icon-xin"></span>
+                                </div>
+                            </li>
+                            <li>
+                                <a href=""  class="clearfix">
+                                    <div class="list-product-l">
+                                        <img src="http://www.aulola.co.uk/images/l/201509/14423775120.jpg" alt="" />
+                                    </div>
+                                    <div class="list-product-r">
+                                        <p class="list-product-name">High-definition Protective Film for iPhone 6 Plus</p>
+                                        <p class="list-product-stock">UK Stock: 1677</p>
+                                        <p class="list-product-price">£0.57</p>
+                                    </div>
+                                </a>
+                                <div class="product-live my-live">
+                                    <span class="iconfont icon-xin current"></span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- 分页 -->
+            <div class="list-shopping-paging clearfix">
+                <ul>
+                    <li id="first">Home</li>
+                    <li id="top">Back</li>
+                    <li class="xifenye" id="xifenye">
+                        <a id="xiye">1</a> / <a id="mo">66</a>
+                        <div class="xab" id="xab" style="display:none">
+                            <ul id="uljia" class="paging-num">
+                                
+                            </ul>
+                        </div>
+                    </li>
+                    <li id="down">Next</li>
+                    <li id="last" style="margin-right:0;">End</li>
+                </ul>
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </body>
+</html>
+
+
+<script type="text/javascript">
+
+function listShow(){
+    if($(".product-show h3 .icon-30jiantouxiangxiafill").hasClass('current')){
+        $("body,html").css({"height":"100%","overflow":"hidden"});
+    }else{
+        $("body,html").css({"height":"auto","overflow":"auto"});
+    };
+};
+// 菜单伸展
+$(".product-all-list").on("click",function(){
+    $(".product-all-list-bg").stop().slideToggle(300);
+    $(this).children().toggleClass('current');
+    listShow();
+});
+$(".product-all-list-bg").on("click",function(e){
+    $(".product-all-list-bg").stop().slideUp(300);
+    $(".product-all-list").children().toggleClass('current');
+    listShow();
+})
+$(".product-all-list-t").on("click",function(e){
+    e.stopPropagation();
+})
+
+// 按要求排序产品
+$(".list-classification-l").on("change",function(){
+    var classificationText=$('.list-classification-l option:selected').text();
+    $(".list-classification-name").html(classificationText);
+});
+
+</script>

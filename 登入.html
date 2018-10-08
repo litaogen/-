@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes" /><!-- 删除苹果默认的工具栏和菜单栏 -->
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" /><!-- 设置苹果工具栏颜色 -->
+        <meta name="format-detection" content="telphone=no, email=no" /><!-- 忽略页面中的数字识别为电话，忽略email识别 -->
+        <!-- 启用360浏览器的极速模式(webkit) -->
+        <meta name="renderer" content="webkit">
+        <!-- 避免IE使用兼容模式 -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+        <meta name="HandheldFriendly" content="true">
+        <!-- 微软的老式浏览器 -->
+        <meta name="MobileOptimized" content="320">
+        <!-- uc强制竖屏 -->
+        <meta name="screen-orientation" content="portrait">
+        <!-- QQ强制竖屏 -->
+        <meta name="x5-orientation" content="portrait">
+        <!-- UC强制全屏 -->
+        <meta name="full-screen" content="yes">
+        <!-- QQ强制全屏 -->
+        <meta name="x5-fullscreen" content="true">
+        <!-- UC应用模式 -->
+        <meta name="browsermode" content="application">
+        <!-- QQ应用模式 -->
+        <meta name="x5-page-mode" content="app">
+        <!-- windows phone 点击无高光 -->
+        <meta name="msapplication-tap-highlight" content="no">
+        <!-- 适应移动端end -->
+    </head>
+    <link rel="stylesheet" type="text/css" href="css/base.css" />
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/base.js"></script>
+    <script src="js/public.js"></script>
+    <body>
+        <div class="warp">
+            <!-- 头部str -->
+            <div class="header clearfix">
+                <div class="header-l">
+                    <span class="iconfont icon-renwu-ren"></span>
+                    <span class="iconfont icon-fangdajing"></span>
+                </div>
+                <div class="header-logo">
+                    <img src="image/logo.png" width="80" />
+                </div>
+                <div class="header-r">
+                    <span class="iconfont icon-icozhuanhuan">
+                        <em>1</em>
+                    </span>
+                    <span class="iconfont icon-liebiao"></span>
+                </div>
+            </div>
+            <!-- 头部end -->
+
+
+            <div class="comment-top">
+                <div class="login-img">
+                    <img src="image/login-p.png" alt="" />
+                </div>
+                <div class="mobile-login">
+                    <form action="">
+                        <div class="login-sty">
+                            <input type="text" class="mobile-logon-text" placeholder="E-mail" data-ajax="0"/>
+                            <span class="iconfont icon-ren"></span>
+                            <p class="red input-null">* This is a required field.</p>
+                            <p class="red email-error">* Please enter a valid email address. For example johndoe@domain.com.</p>
+                        </div>
+                        <div class="login-sty">
+                            <input type="password" class="mobile-logon-pad" placeholder="Password" data-ajax="0"/>
+                            <span class="iconfont icon-suo"></span>
+                            <p class="red input-null">* This is a required field.</p>
+                        </div>
+                        <button class="login-btn">Login</button>
+                    </form>
+                    <div class="login-order">
+                        <a href="">Forgot your password ?</a>
+                        <a href="" class="fr">Create an account</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+<script type="text/javascript">
+    $(".mobile-login input").on("focus",function(){
+        $(this).nextAll('p').hide();
+    });
+    $(".mobile-logon-text").on("blur",function(){
+        var emailS=/^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.[a-zA-Z0-9]{2,6}$/;
+        var _tVal=$.trim($(this).val());
+        if(_tVal==""){
+            $(this).siblings('.input-null').show();
+        }else if(!emailS.test(_tVal)){
+            $(this).siblings('.email-error').show();
+        }else{
+            $(this).attr({"data-ajax":1, });
+        }
+    });
+    // 密码
+    $(".mobile-logon-pad").on("blur",function(){
+        if($(this).val()==""){
+            $(this).siblings('.input-null').show();
+        }else{
+            $(this).attr({"data-ajax":1, });
+        }
+    });
+
+    // 登入提交
+    $(".login-btn").on("click",function(){
+        var emailAttr=$(".mobile-logon-text").attr("data-ajax");
+        var pasAttr=$(".mobile-logon-pad").attr("data-ajax");
+        if(emailAttr==1 && pasAttr==1){
+            console.log("可以提交")
+        }else{
+            for(var i=0;i<$(".mobile-login input").length;i++){
+                if($(".login-sty input").eq(i).val()==''){
+                    $(".login-sty input").eq(i).siblings('.input-null').show();
+                }
+            };
+            return false;
+        }
+    });
+</script>

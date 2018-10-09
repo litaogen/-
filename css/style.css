@@ -63,6 +63,7 @@ div.slide-wrapper.moved {-webkit-transform: translate3d(0, 0, 0);-moz-transform:
 .nav-name{padding:10px 0;overflow-y: hidden;background: #ebebeb;}
 .nav-name ul{width: 2000px;}
 .nav-name ul li{float:left;padding:0 10px;}
+.nav-name ul li a{font-size: 12px;}
 .banner,.product-banner{position: relative;overflow: hidden;}
 .banner .swiper-pagination-bullet-active,.product-logo-img .swiper-pagination-bullet-active,.product-banner .swiper-pagination-bullet-active{background:#ff2323;}
 .list-nav ul li{width: 20%;text-align: center; float:left;padding: 10px 5px;}
